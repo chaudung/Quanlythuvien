@@ -1,0 +1,295 @@
+﻿<!DOCTYPE html>
+    <html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <title></title>
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+      <style type="text/css">
+        .container-fluid {
+            font-family: Arial; 
+          }
+          .header {
+            background-color: #b22830;
+            padding: 30px;
+            text-align: center;
+          }
+          img {
+            width: 150px;
+            height: 150px;
+            text-align: left;
+          }
+          .menu {
+            
+            background-color: #b22830;
+          }
+            h2 {
+                color: white ;
+            }
+        .table&amp;amp;gt;tbody&amp;amp;gt;tr&amp;amp;gt;td, 
+        .table&amp;amp;gt;tfoot&amp;amp;gt;tr&amp;amp;gt;td {  
+    vertical-align: middle;
+    }
+     
+    @media screen and (max-width: 600px) { 
+    table#cart tbody td .form-control { 
+    width:20%;
+    display: inline !important;
+    } 
+     
+    .actions .btn { 
+    width:36%; 
+    margin:1.5em 0;
+    } 
+     
+    .actions .btn-info { 
+    float:left;
+    } 
+     
+    .actions .btn-danger { 
+    float:right;
+    } 
+     
+    table#cart thead {
+    display: none;
+    } 
+     
+    table#cart tbody td {
+    display: block;
+    padding: .6rem;
+    min-width:320px;
+    } 
+     
+    table#cart tbody tr td:first-child {
+    background: #333;
+    color: #fff;
+    } 
+     
+    table#cart tbody td:before { 
+    content: attr(data-th);
+    font-weight: bold; 
+    display: inline-block;
+    width: 8rem;
+    } 
+     
+    table#cart tfoot td {
+    display:block;
+    } 
+    table#cart tfoot td .btn {
+    display:block;
+    }
+
+    </style>
+    </head>
+    <body>
+    <div class="container-fluid">
+          <div class="header">
+            <div class="row">
+              <div class="col-md-3">
+            
+              </div>
+              <div class="col-md-9">
+             
+              </div>
+            </div>
+          </div>
+          <div class="menu" style="padding: 10px">
+          <div class="row">
+            <div class="col-md-8">
+              <div class="btn-group">
+                  <button type="button" class="btn text-white " ><i class="fas fa-home"></i> <strong>Trang chủ</strong></button>
+              </div>
+              <div class="btn-group">
+                <button type="button" class="btn  dropdown-toggle text-white" data-toggle="dropdown"> <i class="fas fa-list"></i> <strong>Thực đơn</strong></button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Đồ Uống </a>
+                  <a class="dropdown-item" href="#">Thức Ăn </a>
+                </div>
+              </div>
+              <div class="btn-group"> 
+                <button type="button" class="btn  dropdown-toggle text-white" data-toggle="dropdown"><i class="fas fa-book-open"></i> <strong>Tin tức</strong></button>
+                <div class="dropdown-menu">
+                  <a class="dropdown-item" href="#">Tin tức & Sự Kiện</a>
+                  <a class="dropdown-item" href="#">Khuyễn mãi trong ngày </a>
+                </div>
+              </div>
+              <button type="button" class="btn btn btn-hover text-white" data-toggle="modal"data-target="#Ahihi" style="text-align: center" > <i class="fas fa-phone"></i> <strong>Liên hệ</strong></button>
+              <div id="Ahihi" class="modal fade" role ="dialog">
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title"> Thông tin liên hệ </h5>
+                      <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+                    <div class="modal-body">
+                      <h5>  <i class="fab fa-facebook"></i> Liên hệ fb : https://www.facebook.com/rau0209</h5>
+                      <p>  <i class="fas fa-phone-volume"></i> Holine :0869280017</p>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-danger" data-dismiss="modal"> Đóng</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="btn-group">
+                  <button type="button" class="btn text-white " ><i class="fas fa-map-marked-alt"></i> <strong>Quán Coffee</strong></button>
+              </div>
+            </div>
+            
+            <div class="col-md-4">
+              <form class="form-inline"action="/somepage" >
+                <input class="form-control mr-sm-2 "type="text" placeholder="Search">
+                <button class="btn btn-danger" type="submit">Search</button>
+              </form>
+            </div>
+            
+          </div>
+        </div>
+    <div class="container"> 
+      <div class="container-fluid">
+     <table id="cart" class="table table-hover " style="margin-top: 50px;"> 
+      <thead> 
+       <tr> 
+        <th style="width:40%">Tên sản phẩm</th> 
+        <th style="width:10%">Giá</th> 
+        <th style="width:10%">Số lượng</th> 
+        <th style="width:22%" class="text-center">Thành tiền</th> 
+        <th style="width:15%"> </th> 
+       </tr> 
+      </thead> 
+      <tbody><tr> 
+       <td data-th="Product"> 
+        <div class="row"> 
+         <div class="col-sm-3 "><img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_TRASENVANG.png" alt="Sản phẩm 1" class="img-responsive"  style="height: 110px; width: 110px">
+         </div> 
+         <div class="col-sm-5"> 
+          <h4 class="nomargin">Trà sen vàng</h4> 
+            </div> 
+        </div> 
+       </td> 
+       <td data-th="Price"id="a">35000</td> 
+       <td data-th="Quantity"><input class="form-control text-center" value="1" type="number" id="b">
+       </td> 
+       <td data-th="Subtotal" class="text-center"></td> 
+       <td class="actions" data-th="">
+        <button class="btn btn-info btn-sm"><i class="fa fa-edit"></i>
+        </button> 
+        <button class="btn btn-danger btn-sm"><i class="fa fa-trash-o"></i>
+        </button>
+       </td> 
+      </tr> 
+     
+       <tr> 
+        <td><a href="file:///F:/bootstrap-4.5.0-dist/douong.html" class="btn btn-warning"><i class="fa fa-angle-left"></i> Tiếp tục mua hàng</a>
+        </td> 
+        <td colspan="2" class="hidden-xs"> </td> 
+        <td class="hidden-xs text-center">
+
+        </td> 
+        <td><button type="button" class="btn btn-success " data-toggle="modal"data-target="#Ahihi1" style="width:100% " onclick="tongtien()">Thanh toán <i class="fa fa-angle-right"></i></button>
+          <div id="Ahihi1" class="modal fade" role ="dialog" style="margin-top :70px;">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" Style="color:blue ;"><strong> Xác nhận thanh toán</strong></h5>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                  </div>
+                <div class="modal-body">
+       <div class="row">
+        <div class="col-md-6">
+         <div class="well">
+          <form id="loginForm" method="POST" action="http://hocwebgiare.com" novalidate="novalidate">
+           <div class="form-group"><label for="username" class="control-label">Họ và Tên</label><input class="form-control" id="username" name="username" value="" required="" title="Xin vui lòng nhập họ tên" placeholder="Nhập họ tên" type="text"><span class="help-block"></span> 
+           </div>
+           <div class="form-group"><label for="password" class="control-label">Số điện thoại</label><input class="form-control" id="text" name="text" value="" required="" title="Xin vui lòng nhập số điện thoại"  placeholder="Nhập số điện thoại" type="sdt"><span class="help-block"></span> 
+           </div>
+          <div class="form-group"><label for="password" class="control-label">Email</label><input class="form-control" id="Email" name="Email" value="" required="" title="Xin vui nhập Email"   placeholder="Nhập Email" type="email"><span class="help-block"></span> 
+           </div>
+           <div class="form-group"><label for="password" class="control-label">Địa chỉ</label><input class="form-control" id="diachi" name="diachi" value="" required="" title="Xin vui nhập địa chỉ"  placeholder="Nhập địa chỉ" type="diachi"><span class="help-block"></span> 
+           </div>
+           
+          </form>
+         </div>
+        </div>
+        <div class="col-md-6">
+         <p class="lead">Đơn hàng: </br><span class="text-success">Trà sen vàng</span>
+
+         </p>
+         <img src="https://www.highlandscoffee.com.vn/vnt_upload/product/03_2018/thumbs/270_crop_TRASENVANG.png" alt="">
+         <br>
+         <br>
+
+         <div>
+          <label for = "size"> Chọn size :</label>
+          <input type="radio" name="size" id="size" /> X
+          <input type="radio" name="size" id="size"/> L
+           <input type="radio" name="size" id="size" /> M
+          <br>
+          <br>
+          <br>
+          <p id="thu"> </p>
+
+        </div>
+         <p><a href="#" class="btn btn-info btn-block">Đặt hàng</a>
+         </p>
+        </div>
+       </div>
+      </div>
+
+      </form>
+                        
+                            
+        </td> 
+       </tr> 
+      </tfoot> 
+     </table>
+    </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid" style="background-color:  #b22830 ;padding-top: 30px; color: white">
+     <div class="footer">
+              <div class="row">
+                <div class="col-md-4">
+                  <p><i class="fas fa-map-marker-alt"></i>  Địa chỉ : 176 Trần Phú </p>
+                  <p><i class="fas fa-envelope-square"></i>  Email : Khanhquoc2920@gmail.com </p>
+                  </div>
+                <div class="col-md-4">
+                  Copyright 2020 · Thiết kế và phát triển bởi KhanhDzai All rights reserved
+                  </div>
+                <div class="col-md-4">
+                  CHÚNG TÔI LUÔN LẤY UY TÍN LÀM HÀNG ĐẦU ĐỐI VỚI KHÁCH HÀNG. HI VỌNG SẼ ĐƯỢC PHỤC VỤ CÁC BẠN. CẢM ƠN!
+                  </div>
+              </div>
+          </div>
+    </div>
+    <script >
+        
+    function tongtien()
+    { var x = document.getElementById("a").innerHTML; 
+         y=parseInt(x);
+      z=document.getElementById("b").value; 
+        t= parseInt(z);
+     var h = (y*t);
+    document.getElementById("thu").innerHTML="Tổng tiền là "+h;
+      
+
+    }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script></body>
+    </html>   
